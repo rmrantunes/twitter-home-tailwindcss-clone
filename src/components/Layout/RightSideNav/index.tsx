@@ -29,21 +29,21 @@ const whatIsHappeningItemsList: IWhatIsHappeningItemProps[] = [
 ];
 
 export const RightSideNav = () => {
-  const maybeYouLikeItemsComponents = (maybeYouLikeItemsList.map(
+  const maybeYouLikeItemComponents: TCardElements = (maybeYouLikeItemsList.map(
     ({ name, userName }) => <MaybeYouLikeItem name={name} userName={userName} />
   ) as unknown) as TCardElements;
 
-  const whatIsHappeningItemsComponents = (whatIsHappeningItemsList.map(
+  const whatIsHappeningItemComponents = (whatIsHappeningItemsList.map(
     ({ title }) => <WhatIsHappeningItem title={title} />
   ) as unknown) as TCardElements;
 
   return (
     <aside className="hidden lg:block w-100 py-2 px-6 space-y-4">
       <SearchInput />
-      <Card title="Talvez você curta" Items={maybeYouLikeItemsComponents} />
+      <Card title="Talvez você curta" Items={maybeYouLikeItemComponents} />
       <Card
         title="O que está acontecendo"
-        Items={whatIsHappeningItemsComponents}
+        Items={whatIsHappeningItemComponents}
       />
     </aside>
   );
