@@ -1,9 +1,10 @@
 import React from "react";
+import { Layout } from "./components/Layout/Layout";
 
 function App() {
   return (
-    <div className="bg-blue-500 text-white min-h-screen flex items-center justify-center">
-      Tailwind is working properly.
+    <div>
+      <Layout />
     </div>
   );
 }
